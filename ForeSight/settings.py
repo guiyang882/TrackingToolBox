@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ForeSightStock.urls'
+ROOT_URLCONF = 'ForeSight.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ForeSightStock.wsgi.application'
+WSGI_APPLICATION = 'ForeSight.wsgi.application'
 
 
 # Database
