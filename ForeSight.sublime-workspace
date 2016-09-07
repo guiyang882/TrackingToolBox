@@ -1,0 +1,314 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mere",
+				"merge_data"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"json",
+				"json_parse"
+			],
+			[
+				"jso",
+				"json_parse"
+			],
+			[
+				"ero",
+				"error_type"
+			],
+			[
+				"in",
+				"input_xml_string"
+			],
+			[
+				"err",
+				"error_type"
+			],
+			[
+				"info",
+				"info_dict"
+			],
+			[
+				"as",
+				"abs_prefix_path"
+			],
+			[
+				"rota",
+				"rotateSubMatrix"
+			],
+			[
+				"pos",
+				"posB"
+			],
+			[
+				"firs",
+				"first"
+			],
+			[
+				"sec",
+				"second"
+			],
+			[
+				"fir",
+				"firstPos"
+			],
+			[
+				"de",
+				"define"
+			],
+			[
+				"inc",
+				"include"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": ":w",
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":4",
+				"Set Syntax: camlp4"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 265.0,
+		"history":
+		[
+			"import sys",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/templates"
+	],
+	"file_history":
+	[
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/README.md",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/manage.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/settings.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/urls.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/wsgi.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight.sublime-project",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/LICENSE",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/cmd.sh",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/source/utils.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/merge_error/time_error",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/time_error",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/messy_code",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/source/tmp.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/merge_error/abstract_keyword_ref_error",
+		"/Users/liuguiyang/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/merge_error/author_error",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/source/copyDirs.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/source/main.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/source/db.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/badcase.sublime-project",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/README.md",
+		"/Users/liuguiyang/Documents/CodeProj/ConsoleProj/hihocoder/main.cpp",
+		"/Users/liuguiyang/Documents/CodeProj/ConsoleProj/hihocoder/tmp.cpp",
+		"/Users/liuguiyang/Library/Application Support/Sublime Text 3/Packages/User/CTags.sublime-settings",
+		"/Users/liuguiyang/Downloads/untitled.cpp"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"http",
+			"http://adsabs.harvard.edu/abs/2014ITSP...62.2000W",
+			"print",
+			"CDATA",
+			"getNameSpace",
+			"rotateSubMatrix",
+			"isSame",
+			"analysis"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ForeSight.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"/main",
+				"~/Documents/CodeProj/ConsoleProj/hihocoder/main.cpp"
+			],
+			[
+				"",
+				"Package Control Messages"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
