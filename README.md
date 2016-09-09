@@ -12,7 +12,34 @@
   - 指定文件存储的路径(HDFS的路径)
 
 
-## 配置使用
+## 环境配置
+```bash
+➜  /Users/liuguiyang uname
+Darwin
+➜  /Users/liuguiyang uname -r
+15.6.0
+➜  /Users/liuguiyang clang -v
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+➜  /Users/liuguiyang python --version
+Python 2.7.11
+➜  /Users/liuguiyang ipython
+Python 2.7.11 (default, Jan 22 2016, 08:29:18)
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.2.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import django
+
+In [2]: django.VERSION
+Out[2]: (1, 9, 6, 'final', 0)
+```
 
 ## 运行结果展示
 
