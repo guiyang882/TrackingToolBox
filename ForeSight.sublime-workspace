@@ -141,15 +141,19 @@
 	[
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ManageMent",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/templates"
 	],
 	"file_history":
 	[
-		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/README.md",
-		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/manage.py",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/settings.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ManageMent/apps.py",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/urls.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ManageMent/models.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/README.md",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/__init__.py",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight/wsgi.py",
+		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/manage.py",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/ForeSight.sublime-project",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/ForeSight/LICENSE",
 		"/Users/liuguiyang/Documents/CodeProj/PyProj/badcase/cmd.sh",

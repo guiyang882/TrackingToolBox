@@ -2,13 +2,39 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib import admin
-from django.contrib.auth.models import User
+from django.db.models import permalink
 
-# Create your models here.
-class PushVideo(models.Model):
-	title = models.CharField(max_length = 150)
-	body = models.TextField()
-	timestamp = models.DateTimeField()
+class Photo(models.Model):
+    caption = models.CharField(max_length=150)
+    image = models.ImageField(upload_to="photos")
+    description = models.TextField()
+    timestamp = models.DateTimeField()
 
+    class Meta:
+        ordering = ['caption']
 
-admin.site.register(PushVideo)
+    def __unicode__(self):
+        return self.caption
+
+    @permalink
+    def get_absolute_url(self):
+        return ("photo_detail", None, {"object_id" : self.id})
+
+class Video(models.Model):
+    caption = models.CharField(max_length=150)
+    content = models.ImageField(upload_to="videos")
+    description = models.TextField()
+    timestamp = models.DateTimeField()
+
+    class Meta:
+        ordering = ["caption"]
+
+    def __unicode__(self):
+        return self.caption
+
+    @permalink
+    def get_absolute_url(self):
+        return ("video_detail", None, {"object_id" : self.id})
+
+admin.site.register(Photo)
+admin.site.register(Video)
