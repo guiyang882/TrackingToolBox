@@ -60,7 +60,7 @@
 <header class="jumbotron subhead" id="header-base">
     <div class="container">
         <h1>遇见未来的自己</h1>
-        <h3>&emsp;&emsp;精彩不止于此</h3>
+        <h4>精彩不止于此</h4>
     </div>
 </header>
 <!-- /.header -->
@@ -69,18 +69,23 @@
 <!-- /.main -->
 
 <!-- footer -->
-<footer class="footer" role="contentinfo">
+<footer class="footer" role="contentinfo" id="footer">
     <hr>
     <div class="container">
-        <p class="text-center"><strong>DUC-UCAS</strong></p>
-        <p class="text-center">©All rights reserved</p>
+        <p class="text-center"><strong>DUC-UCAS ©All rights reserved</strong></p>
         <h5 class="text-center"> Powered by&nbsp;<a href="https://github.com/liuguiyangnwpu/ForeSight">Guiyang</a></h5>
-        <h5 class="text-center">Email:<span class="text-info">liuguiyangnwpu@163.com</span></h5>
     </div>
 </footer>
 <!-- /.footer-->
 <script type="text/javascript">
     $('#{{active_menu}}').addClass("active");
 </script>
+
+<script type="text/javascript">
+    var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("footer").style.width=w + "px";
+</script>
+
 </body>
 </html>
