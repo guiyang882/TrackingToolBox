@@ -27,17 +27,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{% url 'homepage' %}" class="navbar-brand">Library</a>
+            <a href="{% url 'homepage' %}" class="navbar-brand">遇见</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse-basepage">
             <ul class="nav navbar-nav">
                 <li id="homepage"><a href="{% url 'homepage' %}">主页</a></li>
                 {% if user.myuser.permission > 1 %}
-                    <li id="add_book"><a href="{% url 'add_book' %}">上传视频</a></li>
-                    <li id="add_img"><a href="{% url 'add_img' %}">上传图片</a></li>
+                    <li id="add_book"><a href="#">上传视频</a></li>
+                    <li id="add_img"><a href="#">上传图片</a></li>
                 {% endif %}
-                <li id="view_book"><a href="{% url 'view_book_list' %}">查看资源</a></li>
+                <li id="view_book"><a href="#">查看资源</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user %}
@@ -58,8 +58,8 @@
 <!-- header -->
 <header class="jumbotron subhead" id="header-base">
     <div class="container">
-        <h1>图书管理系统</h1>
-        <h3>&emsp;&emsp;知识改变命运</h3>
+        <h1>遇见未来的自己</h1>
+        <h3>&emsp;&emsp;精彩不止于此</h3>
     </div>
 </header>
 <!-- /.header -->
@@ -71,9 +71,9 @@
 <footer class="footer" role="contentinfo">
     <hr>
     <div class="container">
-        <p class="text-center"><strong>HIT-CS</strong></p>
+        <p class="text-center"><strong>DUC-UCAS</strong></p>
         <p class="text-center">©All rights reserved</p>
-        <h5 class="text-center"> Powered by&nbsp;<a href="http://yumendy.com/">Duan Yi</a></h5>
+        <h5 class="text-center"> Powered by&nbsp;<a href="https://github.com/liuguiyangnwpu/ForeSight">Guiyang</a></h5>
     </div>
 </footer>
 <!-- /.footer-->
