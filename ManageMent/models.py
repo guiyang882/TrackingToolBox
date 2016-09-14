@@ -8,6 +8,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 class Photo(models.Model):
     caption = models.CharField(max_length=150)
+    author = models.CharField(max_length=150)
     image = models.ImageField(upload_to="photos")
     description = models.TextField()
     timestamp = models.DateTimeField()
@@ -24,6 +25,7 @@ class Photo(models.Model):
 
 class Video(models.Model):
     caption = models.CharField(max_length=150)
+    author = models.CharField(max_length=150)
     content = models.ImageField(upload_to="videos")
     description = models.TextField()
     timestamp = models.DateTimeField()

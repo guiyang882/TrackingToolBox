@@ -4,8 +4,14 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 
+from ManageMent.utils import permission_check
 from ManageMent.models import MyUser
+from ManageMent.models import Video
+from ManageMent.models import Photo
+
+from datetime import datetime
 
 # Create your views here.
 
@@ -95,3 +101,45 @@ def set_password(request):
         'state': state,
     }
     return render(request, 'management/set_password.html', content)
+
+@user_passes_test(permission_check)
+def upload_videos(request):
+    user = request.user
+    state = None
+    if request.method == 'POST':
+        new_video = Video(
+            caption=request.POST.get('name', ''),
+            author=user,
+            content=request.FILES.get('filepath', ''),
+            description="default",
+            timestamp=str(datetime.now())
+        )
+        new_video.save()
+        state = 'success'
+    content = {
+        'user': user,
+        'active_menu': 'upload_videos',
+        'state': state,
+    }
+    return render(request, 'management/upload_videos.html', content)
+
+@user_passes_test(permission_check)
+def upload_images(request):
+    user = request.user
+    state = None
+    if request.method == 'POST':
+        new_img = Photo(
+            caption=request.POST.get('name', ''),
+            author=user,
+            image=request.FILES.get('img', ''),
+            description=request.POST.get('description', ''),
+            timestamp=str(datetime.now())
+        )
+        new_img.save()
+        state = 'success'
+    content = {
+        'user': user,
+        'state': state,
+        'active_menu': 'upload_images',
+    }
+    return render(request, 'management/upload_images.html', content)

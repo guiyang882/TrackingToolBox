@@ -34,8 +34,8 @@
             <ul class="nav navbar-nav">
                 <li id="homepage"><a href="{% url 'homepage' %}">主页</a></li>
                 {% if user.myuser.permission > 1 %}
-                    <li id="add_book"><a href="#">上传视频</a></li>
-                    <li id="add_img"><a href="#">上传图片</a></li>
+                    <li id="upload_videos"><a href="{% url 'upload_videos' %}">上传视频</a></li>
+                    <li id="upload_images"><a href="{% url 'upload_images' %}">上传图片</a></li>
                 {% endif %}
                 <li id="view_book"><a href="#">查看资源</a></li>
             </ul>
