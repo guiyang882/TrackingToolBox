@@ -11,7 +11,8 @@ class Photo(models.Model):
     author = models.CharField(max_length=150)
     image = models.ImageField(upload_to="photos")
     description = models.TextField()
-    timestamp = models.DateTimeField()
+    category = models.CharField(max_length=128)
+    timestamp = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['caption']
@@ -26,9 +27,10 @@ class Photo(models.Model):
 class Video(models.Model):
     caption = models.CharField(max_length=150)
     author = models.CharField(max_length=150)
-    content = models.ImageField(upload_to="videos")
+    content = models.FileField(upload_to="videos")
     description = models.TextField()
-    timestamp = models.DateTimeField()
+    category = models.CharField(max_length=128)
+    timestamp = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["caption"]

@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'^set_password/$', views.set_password, name='set_password'),
     url(r'^upload_videos/$', views.upload_videos, name='upload_videos'),
     url(r'^upload_images/$', views.upload_images, name='upload_images'),
+    url(r'^view_videos/$', views.view_videos_list, name='view_videos'),
+    url(r'^view_images/$', views.view_images_list, name='view_images'),
 ]

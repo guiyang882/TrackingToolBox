@@ -37,7 +37,8 @@
                     <li id="upload_videos"><a href="{% url 'upload_videos' %}">上传视频</a></li>
                     <li id="upload_images"><a href="{% url 'upload_images' %}">上传图片</a></li>
                 {% endif %}
-                <li id="view_book"><a href="#">查看资源</a></li>
+                <li id="view_images"><a href="{% url 'view_images' %}">瞬间</a></li>
+                <li id="view_videos"><a href="{% url 'view_videos' %}">分享</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user %}
@@ -74,6 +75,7 @@
         <p class="text-center"><strong>DUC-UCAS</strong></p>
         <p class="text-center">©All rights reserved</p>
         <h5 class="text-center"> Powered by&nbsp;<a href="https://github.com/liuguiyangnwpu/ForeSight">Guiyang</a></h5>
+        <h5 class="text-center">Email:<span class="text-info">liuguiyangnwpu@163.com</span></h5>
     </div>
 </footer>
 <!-- /.footer-->

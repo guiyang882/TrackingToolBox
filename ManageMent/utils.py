@@ -6,6 +6,6 @@ import time
 
 def permission_check(user):
     if user.is_authenticated():
-        return user.myuser.permission > 1
+        return True
     else:
         return False

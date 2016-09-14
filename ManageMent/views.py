@@ -3,15 +3,18 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.contrib import auth
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 
 from ManageMent.utils import permission_check
 from ManageMent.models import MyUser
 from ManageMent.models import Video
 from ManageMent.models import Photo
-
-from datetime import datetime
 
 # Create your views here.
 
@@ -110,9 +113,9 @@ def upload_videos(request):
         new_video = Video(
             caption=request.POST.get('name', ''),
             author=user,
-            content=request.FILES.get('filepath', ''),
-            description="default",
-            timestamp=str(datetime.now())
+            content=request.FILES.get('video', ''),
+            category="default",
+            description="default"
         )
         new_video.save()
         state = 'success'
@@ -132,8 +135,8 @@ def upload_images(request):
             caption=request.POST.get('name', ''),
             author=user,
             image=request.FILES.get('img', ''),
-            description=request.POST.get('description', ''),
-            timestamp=str(datetime.now())
+            category="default",
+            description=request.POST.get('description', '')
         )
         new_img.save()
         state = 'success'
@@ -143,3 +146,83 @@ def upload_images(request):
         'active_menu': 'upload_images',
     }
     return render(request, 'management/upload_images.html', content)
+
+def view_images_list(request):
+    user = request.user if request.user.is_authenticated() else None
+    category_list = Photo.objects.values_list('category', flat=True).distinct()
+    query_category = request.GET.get('category', 'all')
+    if (not query_category) or Photo.objects.filter(category=query_category).count() is 0:
+        query_category = 'all'
+        photo_list = Photo.objects.all()
+    else:
+        photo_list = Photo.objects.filter(category=query_category)
+
+    if request.method == 'POST':
+        keyword = request.POST.get('keyword', '')
+        photo_list = Photo.objects.filter(name__contains=keyword)
+        query_category = 'all'
+
+    paginator = Paginator(photo_list, 5)
+    page = request.GET.get('page')
+    try:
+        book_list = paginator.page(page)
+    except PageNotAnInteger:
+        book_list = paginator.page(1)
+    except EmptyPage:
+        book_list = paginator.page(paginator.num_pages)
+    content = {
+        'user': user,
+        'active_menu': 'view_images',
+        'category_list': category_list,
+        'query_category': query_category,
+        'photos_list': photo_list,
+    }
+    return render(request, 'management/view_images_list.html', content)
+
+def image_detail(request):
+    user = request.user if request.user.is_authenticated() else None
+    book_id = request.GET.get('id', '')
+    if book_id == '':
+        return HttpResponseRedirect(reverse('view_images'))
+    try:
+        book = Photo.objects.get(pk=book_id)
+    except Photo.DoesNotExist:
+        return HttpResponseRedirect(reverse('view_images'))
+    content = {
+        'user': user,
+        'active_menu': 'view_images',
+        'book': book,
+    }
+    return render(request, 'management/image_detail.html', content)
+
+def view_videos_list(request):
+    user = request.user if request.user.is_authenticated() else None
+    category_list = Video.objects.values_list('category', flat=True).distinct()
+    query_category = request.GET.get('category', 'all')
+    if (not query_category) or Video.objects.filter(category=query_category).count() is 0:
+        query_category = 'all'
+        video_list = Video.objects.all()
+    else:
+        video_list = Video.objects.filter(category=query_category)
+
+    if request.method == 'POST':
+        keyword = request.POST.get('keyword', '')
+        video_list = Video.objects.filter(name__contains=keyword)
+        query_category = 'all'
+
+    paginator = Paginator(video_list, 5)
+    page = request.GET.get('page')
+    try:
+        book_list = paginator.page(page)
+    except PageNotAnInteger:
+        book_list = paginator.page(1)
+    except EmptyPage:
+        book_list = paginator.page(paginator.num_pages)
+    content = {
+        'user': user,
+        'active_menu': 'view_videos',
+        'category_list': category_list,
+        'query_category': query_category,
+        'videos_list': video_list,
+    }
+    return render(request, 'management/view_videos_list.html', content)
