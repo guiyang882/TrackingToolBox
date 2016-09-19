@@ -181,18 +181,19 @@ def view_images_list(request):
 
 def image_detail(request):
     user = request.user if request.user.is_authenticated() else None
-    book_id = request.GET.get('id', '')
-    if book_id == '':
+    image_id = request.GET.get('id', '')
+    if image_id == '':
         return HttpResponseRedirect(reverse('view_images'))
     try:
-        book = Photo.objects.get(pk=book_id)
+        image = Photo.objects.get(pk=image_id)
     except Photo.DoesNotExist:
         return HttpResponseRedirect(reverse('view_images'))
     content = {
         'user': user,
         'active_menu': 'view_images',
-        'book': book,
+        'image': image
     }
+    print content["image"]
     return render(request, 'management/image_detail.html', content)
 
 def view_videos_list(request):

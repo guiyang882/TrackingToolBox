@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>遇见自己</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/booststrap.min.js"></script>
+</head>
+<body>
+<!--Here is the navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-basepage">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="homepage" class="navbar-brand">遇见</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-basepage">
+            <ul class="nav navbar-nav">
+                <li id="homepage"><a href="homepage">主页</a></li>
+                    <li id="upload_videos"><a href="upload_videos">上传视频</a></li>
+                    <li id="upload_images"><a href="upload_images">上传图片</a></li>
+                <li id="view_images"><a href="view_images">瞬间</a></li>
+                <li id="view_videos"><a href="view_videos">分享</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                    <li><p class="navbar-text">欢迎你&nbsp;&nbsp;<span id="base_name">admin</span></p>
+                    </li>
+                    <li><a href="logout">注销</a></li>
+                    <li><a href="set_password">修改密码</a></li>
+                    <li><a href="signup">注册</a></li>
+                    <li><a href="login">登录</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- /nav -->
+<!-- header -->
+<header class="jumbotron subhead" id="header-base">
+    <div class="container">
+        <h1>遇见未来的自己</h1>
+        <h4>精彩不止于此</h4>
+    </div>
+</header>
+<!-- /.header -->
+<!-- main part -->
+<!-- /.main -->
+
+<!-- footer -->
+<footer class="footer" role="contentinfo" id="footer">
+    <hr>
+    <div class="container">
+        <p class="text-center"><strong>DUC-UCAS ©All rights reserved</strong></p>
+        <h5 class="text-center"> Powered by&nbsp;<a href="https://github.com/liuguiyangnwpu/ForeSight">Guiyang</a></h5>
+    </div>
+</footer>
+<!-- /.footer-->
+<script type="text/javascript">
+    $('#{{active_menu}}').addClass("active");
+</script>
+
+<script type="text/javascript">
+    var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("footer").style.width=w + "px";
+</script>
+
+</body>
+</html>
