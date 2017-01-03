@@ -1,2 +1,5 @@
 .idea/*
 db.sqlite3
+cmake-build-debug/
+dataset/*
+.DS_Store
