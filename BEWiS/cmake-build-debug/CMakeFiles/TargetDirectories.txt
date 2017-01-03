@@ -1,0 +1,4 @@
+/Users/liuguiyang/Documents/CodeProj/ConsoleProj/BEWiS/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/liuguiyang/Documents/CodeProj/ConsoleProj/BEWiS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/liuguiyang/Documents/CodeProj/ConsoleProj/BEWiS/cmake-build-debug/CMakeFiles/bewis.dir
+/Users/liuguiyang/Documents/CodeProj/ConsoleProj/BEWiS/cmake-build-debug/CMakeFiles/wisard.dir
